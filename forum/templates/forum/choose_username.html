@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Username</title>
+    {% load static %}
+    <link rel="stylesheet" href="{forum\static\forum\styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter your username</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" required placeholder="Enter your username">
+            <button type="submit">Start Chatting</button>
+        </form>
+    </div>
+</body>
+</html>
